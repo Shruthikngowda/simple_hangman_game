@@ -1,6 +1,9 @@
 import sys
+import random
+import string
 
-secret_word = "beaful"
+letters = string.ascii_lowercase
+secret_word = ''.join(random.choice(letters) for i in range(8))
 no_of_guesses = 10
 alphabet_set = "abcdefghijklmnopqrstuvwxyz"
 print("YOur secret word contains ", len(secret_word) , " letters")
@@ -39,4 +42,5 @@ while no_of_guesses > 0:
       print("the secret word now is ",to_show_user)
     
 
-print("Sorry, you lost the game ")
+print("Sorry, you lost the game! ")
+print("The secret word is : ", secret_word)
